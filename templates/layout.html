@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%block title%} {%endblock title%}</title>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+</head>
+<body style="background-color: rgb(21, 32, 43);">
+    {%include "includes/navbar.html"%}
+
+    <br>
+    <div class="container">
+<br>
+            {% if messages %}
+        <br><br>
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">{{message}}</div>
+                {% endfor %}
+            {% endif %}
+
+        {%block body%}
+
+        {%endblock body%}
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="{%static 'js/bootstrap.min.js'%}"></script>
+
+        {%block scrs%}
+
+        {%endblock scrs%}
+        
+    </div>
+</body>
+</html>

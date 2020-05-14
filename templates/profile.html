@@ -1,0 +1,39 @@
+{%extends "layout.html"%}
+
+{%block title%}{{request.user.username}}{%endblock title%}
+
+{%block body%}
+{% load crispy_forms_tags %}
+
+<hr>
+<h3 style="text-align: center;" class="text-info">{{request.user.username}}</h3>
+<h5 style="text-align: center;" class="text-info">Hoş Geldiniz {{request.user.first_name}} {{request.user.last_name}}</h5>
+<hr style="border-top:1px solid aqua;">
+<hr>
+<h5 style="text-align: center;" class="text-warning">İzlenecekler Listeniz</h5>
+
+{%if watches%}
+<div class="text-center">
+    <table class="table table-striped table-info">
+        <thead>
+          <tr>
+            <th scope="col">Dizi Adı</th>
+            <th scope="col">Listeye Eklenme Tarihi</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for watch in watches %}
+                <tr>
+                    <td>{{watch.series}}</td>
+                    <td>{{watch.addedDate}}</td>
+                </tr>
+            {%endfor%}
+
+
+        </tbody>
+    </table>
+</div>
+{%else%}
+<div class="alert alert-info">Hiçbir diziyi listenize eklemediniz.</div>
+{%endif%}
+{%endblock body%}

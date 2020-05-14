@@ -1,0 +1,39 @@
+{%extends "layout.html"%}
+
+{%block title%}Arama Sonuçları{%endblock title%}
+
+{%block body%}
+{% load crispy_forms_tags %}
+<hr>
+<h3 style="text-align: center;" class="text-info">Arama Sonuçları</h3>
+<hr>
+
+{%if series %}
+
+{%for s in series %}
+
+<div class="row">
+  <div class="col-12">
+  <div class="card text-center bg-info">
+  <div class="card-header">
+    <h4>{{s.title}}</h4>
+    {{s.year}}
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{s.issue}}</p>
+    <p class="text-warning">IMDB Puanı: {{s.imdbPoint}}</p>
+  </div>
+  <div class="card-footer text-muted">
+    <a href="{% url 'TvShow:detail' s.id%}" class="btn btn-info">Detay</a>
+  </div>
+</div></div>
+</div>
+  <hr style="border-top:1px solid aqua;">
+
+{%endfor%}
+{%else%}
+<div class="alert alert-danger">Dizi Bulunamadı.</div>
+{%endif%}
+
+    
+{%endblock body%}
