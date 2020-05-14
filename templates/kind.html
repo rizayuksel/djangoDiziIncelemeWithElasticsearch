@@ -1,6 +1,6 @@
 {%extends "layout.html"%}
 
-{%block title%}Spor{%endblock title%}
+{%block title%}{{kind}}{%endblock title%}
 
 {%block body%}
 
@@ -9,7 +9,6 @@
 <h3 style="text-align: center;" class="text-info">{{kind}}</h3>
 <hr>
 
-<!-- #Veri tabanında otomobil var mı onu kontrol etmek için -->
 {%if series %}
 <div class="row">
 {%for s in series %}
