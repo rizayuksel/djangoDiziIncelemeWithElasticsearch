@@ -30,6 +30,7 @@ Kayıtlı olan kullanıcılarımızın sitemize giriş yapabilmesi için bir Gir
 
 ## 7.Admin Paneli
 Sitemize dizi ekleyebilmek, silebilmek, güncelleyebilmek, gerektiği zaman kullanıcılara yetki vermek veya banlayabilmek için bir admin paneli tasarlandı.
+
 ![11 Admin Paneline Giriş](https://user-images.githubusercontent.com/52426752/95789715-b2ff0180-0ce6-11eb-8f17-a3ed86f59372.PNG)
 ![12 Dizilerin Admin Panelindeki Görünümü](https://user-images.githubusercontent.com/52426752/95789722-b4c8c500-0ce6-11eb-9d72-2653c3d84f7b.PNG)
 ![13 Yeni Dizi Ekleme Sayfası](https://user-images.githubusercontent.com/52426752/95788727-bc876a00-0ce4-11eb-9317-a88e28f74cdf.PNG)
